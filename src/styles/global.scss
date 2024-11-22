@@ -38,6 +38,13 @@
   --grey-95: #f2f2f3;
   --grey-97: #f7f7f8;
   --grey-99: #fcfcfd;
+
+  --dark-colors-gradient: linear-gradient(
+    to bottom,
+    rgba(47, 47, 55, 1) 0%,
+    rgba(47, 47, 55, 1) 28%,
+    rgba(47, 47, 55, 0) 100%
+  );
 }
 
 html {
@@ -79,4 +86,8 @@ code {
     Bitstream Vera Sans Mono,
     Courier New,
     monospace;
+}
+
+* {
+  font-family: 'Manrope', sans-serif;
 }
