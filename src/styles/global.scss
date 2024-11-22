@@ -1,79 +1,23 @@
-:root {
-  --accent: 136, 58, 234;
-  --accent-light: 224, 204, 250;
-  --accent-dark: 49, 10, 101;
-  --accent-gradient: linear-gradient(
-    45deg,
-    rgb(var(--accent)),
-    rgb(var(--accent-light)) 30%,
-    white 60%
-  );
+@import './colors.scss';
+@import './fonts.scss';
 
-  --white: #fff;
-  --black: #000;
-
-  --purple-55: #4a2ced;
-  --purple-60: #5e43ef;
-  --purple-70: #8672f3;
-  --purple-80: #aea1f7;
-  --purple-90: #d6d0fb;
-  --purple-95: #eae7fd;
-  --purple-97: #f3f1fe;
-  --purple-99: #fbfaff;
-
-  --dark-colors-03: #070708;
-  --dark-colors-06: #0e0e10;
-  --dark-colors-08: #131316;
-  --dark-colors-12: #1c1c21;
-  --dark-colors-15: #232329;
-  --dark-colors-20: #2f2f37;
-  --dark-colors-25: #3b3b45;
-  --dark-colors-30: #474752;
-
-  --grey-40: #62646c;
-  --grey-50: #797c86;
-  --grey-70: #afb0b6;
-  --grey-80: #cacace;
-  --grey-90: #e4e4e6;
-  --grey-95: #f2f2f3;
-  --grey-97: #f7f7f8;
-  --grey-99: #fcfcfd;
-
-  --dark-colors-gradient: linear-gradient(
-    to bottom,
-    rgba(47, 47, 55, 1) 0%,
-    rgba(47, 47, 55, 1) 28%,
-    rgba(47, 47, 55, 0.1) 100%
-  );
+ul,
+li,
+a {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
 }
 
-html {
-  font-family: system-ui, sans-serif;
-  background: #13151a;
+html,
+body {
+  background: var(--dark-colors-03);
+  padding: 0px;
+  margin: 0px;
 }
 
-@font-face {
-  font-family: 'Manrope';
-  src: url('../assets/fonts/Manrope/Manrope-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Manrope';
-  src: url('../assets/fonts/Manrope/Manrope-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Manrope';
-  src: url('../assets/fonts/Manrope/Manrope-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+* {
+  font-family: 'Manrope', sans-serif;
 }
 
 code {
@@ -86,8 +30,4 @@ code {
     Bitstream Vera Sans Mono,
     Courier New,
     monospace;
-}
-
-* {
-  font-family: 'Manrope', sans-serif;
 }
