@@ -1,0 +1,33 @@
+---
+import Button from '../Button/Button.astro'
+import styles from './Navbar.module.scss'
+import logo from '@/assets/svg/logo.svg'
+
+const currentPath = Astro.url.pathname
+
+const navItems = [
+  { name: 'Home', path: '/' },
+  { name: 'About Me', path: '/#about_me' },
+  { name: 'Projects', path: '/#projects' },
+]
+
+console.log(currentPath)
+---
+
+<header class={styles.header}>
+  <img src={logo.src} />
+  <nav class={styles.nav}>
+    <ul class={styles.nav_list}>
+      {
+        navItems.map((navItem) => (
+          <li
+            class={`${styles.nav_list_item} ${currentPath === navItem.path && styles['nav_list_item--active']}`}
+          >
+            <a class={styles.nav_list_anchor}>{navItem.name}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+  <Button>Contact Me</Button>
+</header>
