@@ -1,0 +1,50 @@
+---
+import styles from './HorizontalScroller.module.scss'
+import star from '@/assets/svg/abstract-design-4.svg'
+
+interface Props {
+  words?: string[]
+}
+
+const { words } = Astro.props
+---
+
+<script>
+  const scrollers = document.querySelectorAll('.scroller')
+  const scrollerList = document.querySelector('.scroller__list')
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+    scrollingAnimtion()
+
+  function scrollingAnimtion() {
+    scrollers.forEach((scroller) => {
+      scroller.setAttribute('data-animated', true)
+      const scrollerListItems = Array.from(scrollerList.children)
+      scrollerListItems.forEach((item) => {
+        const duplicatedItem = item.cloneNode(true)
+        duplicatedItem.setAttribute('aria-hidden', true)
+        scrollerList.appendChild(duplicatedItem)
+      })
+    })
+  }
+</script>
+
+<div class={`${styles.scroller} scroller`}>
+  <ul class={`${styles.scroller__list} scroller__list`}>
+    <li class={styles.scroller__list_item}>
+      <img class={styles.scroller__star} src={star.src} />
+      ОПЫТ РАБОТЫ В БЭК-ЭНДE
+    </li>
+    <li class={styles.scroller__list_item}>
+      <img class={styles.scroller__star} src={star.src} />
+      FRONT-END РАЗРАБОТЧИК
+    </li>
+    <li class={styles.scroller__list_item}>
+      <img class={styles.scroller__star} src={star.src} />
+      3 ГОДА ОПЫТА
+    </li>
+    <li class={styles.scroller__list_item}>
+      <img class={styles.scroller__star} src={star.src} />
+      REACT NATIVE РАЗРАБОТЧИК
+    </li>
+  </ul>
+</div>

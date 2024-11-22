@@ -3,6 +3,7 @@ import Layout from '@/layouts/Layout.astro'
 import styles from './styles/index.module.scss'
 import hero_background from '@/assets/svg/abstract-design-1.svg'
 import ArrowLink from '@/components/ArrowLink/ArrowLink.astro'
+import HorizontalScroller from '@/components/HorizontalScroller/HorizontalScroller.astro'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -20,5 +21,6 @@ import ArrowLink from '@/components/ArrowLink/ArrowLink.astro'
         <span class={styles.hero__lets_work__title}>РАБОТАТЬ ВМЕСТЕ</span>
       </div>
     </section>
+    <HorizontalScroller />
   </main>
 </Layout>
