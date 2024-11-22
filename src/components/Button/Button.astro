@@ -1,0 +1,12 @@
+---
+import styles from "./Button.module.scss"
+
+interface Props extends astroHTML.JSX.ButtonHTMLAttributes {
+}
+
+const {...props} = Astro.props;
+---
+
+<button class={styles.button} type="button" {...props}>
+    <slot />
+</button>
