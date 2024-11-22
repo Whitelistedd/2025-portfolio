@@ -1,0 +1,18 @@
+.anchor {
+  padding: 18px 50px;
+  border-radius: 100px;
+  background-color: var(--purple-55);
+  display: flex;
+  width: min-content;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow:
+    inset 0px 10px 20px -4px #ffffff50 inset,
+    0px -10px 20px -4px #ffffff50 inset;
+  -moz-box-shadow:
+    inset 0px 10px 20px -4px #ffffff50 inset,
+    0px -10px 20px -4px #ffffff50 inset;
+  box-shadow:
+    0px 10px 20px -4px #ffffff50 inset,
+    0px -10px 20px -4px #ffffff50 inset;
+}

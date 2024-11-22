@@ -1,0 +1,12 @@
+---
+import styles from './ArrowLink.module.scss'
+import arrow from '@/assets/svg/arrow.svg'
+
+interface Props extends astroHTML.JSX.AnchorHTMLAttributes {}
+
+const { ...props } = Astro.props
+---
+
+<a class={styles.anchor} {...props}>
+  <img src={arrow.src} />
+</a>

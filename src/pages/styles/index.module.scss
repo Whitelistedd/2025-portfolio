@@ -1,0 +1,31 @@
+.main {
+  color: var(--white);
+  .hero {
+    padding: 80px 162px;
+    position: relative;
+    background: none;
+    border-top: 1px solid var(--dark-colors-12);
+    border-bottom: 1px solid var(--dark-colors-12);
+    z-index: 2;
+    overflow: hidden;
+    &__title_section {
+      &__role {
+        font-size: 22px;
+      }
+      &__title {
+        font-size: 80px;
+      }
+    }
+
+    &__background {
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 346px;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+}
