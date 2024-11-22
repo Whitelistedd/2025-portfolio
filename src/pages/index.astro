@@ -2,6 +2,7 @@
 import Layout from '@/layouts/Layout.astro'
 import styles from './styles/index.module.scss'
 import hero_background from '@/assets/svg/abstract-design-1.svg'
+import ArrowLink from '@/components/ArrowLink/ArrowLink.astro'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -13,8 +14,10 @@ import hero_background from '@/assets/svg/abstract-design-1.svg'
         <h1 class={styles.hero__title_section__title}>ISMONOV MUHAMAD</h1>
       </div>
       <div class={styles.hero__lets_work}>
-        <span class={styles.hero__lets_work__title}>LET'S</span>
-        <span class={styles.hero__lets_work__title}>Work Together</span>
+        <span class={styles.hero__lets_work__title}
+          >ДАВАЙТЕ <ArrowLink href={'/#contact_me'} /></span
+        >
+        <span class={styles.hero__lets_work__title}>РАБОТАТЬ ВМЕСТЕ</span>
       </div>
     </section>
   </main>

@@ -8,12 +8,29 @@
     border-bottom: 1px solid var(--dark-colors-12);
     z-index: 2;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+
     &__title_section {
+      font-size: inherit;
       &__role {
-        font-size: 22px;
+        font-size: 1.5em;
       }
       &__title {
-        font-size: 80px;
+        font-size: 5em;
+      }
+    }
+
+    &__lets_work {
+      font-size: inherit;
+      display: flex;
+      flex-direction: column;
+      &__title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 3.625em;
+        font-weight: 600;
       }
     }
 
@@ -26,6 +43,13 @@
       align-items: center;
       position: absolute;
       z-index: -1;
+    }
+  }
+
+  @media only screen and (max-width: 1440px) {
+    .hero {
+      padding: 60px 80px;
+      font-size: 12px;
     }
   }
 }
