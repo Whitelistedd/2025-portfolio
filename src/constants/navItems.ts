@@ -1,1 +1,14 @@
-export const navItems = ['Home', 'About Me', 'Projects']
+export const navItems = [
+  {
+    name: 'Главная',
+    path: '/#top',
+  },
+  {
+    name: 'Обо мне',
+    path: '/#aboutme',
+  },
+  {
+    name: 'Проекты',
+    path: '/#projects',
+  },
+]

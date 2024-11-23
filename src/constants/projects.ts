@@ -14,13 +14,13 @@ export const projects = [
   {
     imageSrc: `${import.meta.env.SUPABASE_STORAGE_URL}/xRg7Z68.jpeg`,
     title: 'Dev Links',
-    viewProjectLink: 'https://github.com/social-tree/Link-sharing-app',
-    viewCodeLink: 'https://link-sharing-app-tau.vercel.app/',
+    viewProjectLink: 'https://link-sharing-app-tau.vercel.app/',
+    viewCodeLink: 'https://github.com/social-tree/Link-sharing-app',
   },
   {
     imageSrc: `${import.meta.env.SUPABASE_STORAGE_URL}/RYNSC32.png`,
     title: 'Astro commerce',
-    viewProjectLink: 'https://github.com/Whitelistedd/astro-ecommerce',
-    viewCodeLink: 'https://astro-ecom.vercel.app/',
+    viewProjectLink: 'https://astro-ecom.vercel.app/',
+    viewCodeLink: 'https://github.com/Whitelistedd/astro-ecommerce',
   },
 ]

@@ -39,7 +39,7 @@ import Footer from '@/components/Footer/Footer.astro'
       </div>
     </section>
     <HorizontalScroller words={heroWordsList} />
-    <Section preTitle="ABOUT ME" title="I AM MUHAMAD">
+    <Section id="aboutme" preTitle="ОБО МНЕ" title="Я МУХАМАД">
       <div class={styles.about_me}>
         <div class={styles.about_me__img_container}>
           <img
@@ -51,28 +51,28 @@ import Footer from '@/components/Footer/Footer.astro'
           <div class={styles.details}>
             <h3 class={styles.details__title}>
               <img width="40" height="40" alt="star" src={star.src} />
-              Introduction
+              Введение
             </h3>
             <p class={styles.details__desc}>
-              I am a passionate frontend developer creating creative web and
-              mobile applications. In my free time, I enjoy snowboarding and
-              playing tennis.
+              Я страстный разработчик frontend, создающий креативные веб- и
+              мобильные приложения. В свободное время я люблю кататься на
+              сноуборде и играть в теннис.
               <br />
               <br />
-              I actively participate in the Codecademy community, where I share my
-              experiences and help others with programming. I have successfully debugged
-              code for thousands of users, which has improved my skills.
+              Я активно участвую в сообществе Codecademy, где делюсь своим опытом
+              и помогаю другим с программированием. Я успешно отлаживал код для тысяч
+              пользователей, что улучшило мои навыки.
               <br />
               <br />
-              I believe that mutual learning and collaboration are key to success.
-              I strive to create a positive atmosphere in groups so that everyone
-              can find inspiration and support.
+              Я считаю, что взаимное обучение и сотрудничество являются ключом к
+              успеху. Я стремлюсь создать позитивную атмосферу в группах, чтобы люди
+              могли найти вдохновение и поддержку.
             </p>
           </div>
           <div class={styles.details}>
             <h3 class={styles.details__title}>
               <img width="40" height="40" alt="star" src={star.src} />
-              Contact Information
+              Контактная информация
             </h3>
             <p class={styles.details__desc}>
               Email
@@ -108,12 +108,12 @@ import Footer from '@/components/Footer/Footer.astro'
                   href="/#contact_me"
                 >
                   <Button class={styles.details__actions__buttons__button}>
-                    Let's Work
+                    Давайте работать
                   </Button>
                 </a>
                 <a class={styles.details__actions__buttons__anchor}>
                   <Button class={styles.details__actions__buttons__button}>
-                    Download CV
+                    Скачать резюме
                   </Button>
                 </a>
               </div>
@@ -122,8 +122,7 @@ import Footer from '@/components/Footer/Footer.astro'
         </div>
       </div>
     </Section>
-    <Section preTitle="PORTFOLIO" title="EXPLORE MY PROJECTS">
-      <Button slot="sideButton">View All Works -></Button>
+    <Section id={'projects'} preTitle="ПОРТФОЛИО" title="МОИ ПРОЕКТЫ">
       <div class={styles.projects}>
         {
           projects.map(({ imageSrc, title, viewCodeLink, viewProjectLink }) => (
@@ -137,7 +136,7 @@ import Footer from '@/components/Footer/Footer.astro'
         }
       </div>
     </Section>
-    <Section preTitle="EXPERIENCE" title="MY SKILLS AND EXPERIENCE">
+    <Section preTitle="ОПЫТ" title="МОИ НАВЫКИ И ОПЫТ">
       <div class={styles.experience_section}>
         <div class={styles.technologies}>
           {
@@ -151,7 +150,7 @@ import Footer from '@/components/Footer/Footer.astro'
         </div>
         <div class={styles.experiences}>
           <div class={styles.experience}>
-            <span class={styles.experience__timeline}>2021 - Now</span>
+            <span class={styles.experience__timeline}>2022 - Сейчас</span>
             <div class={styles.experience__details}>
               <strong class={styles.experience__details__company}
                 >Sektor Business</strong

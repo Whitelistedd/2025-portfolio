@@ -6,6 +6,7 @@
   padding: 0px 40px;
   border-right: 1px solid var(--dark-colors-12);
   border-left: 1px solid var(--dark-colors-12);
+  border-bottom: 1px solid var(--dark-colors-12);
   background-color: var(--dark-colors-03);
 
   .nav {
@@ -31,6 +32,7 @@
       padding: 30px 40px;
       background-color: transparent;
       color: var(--grey-70);
+      transition: 200ms ease;
 
       &:hover {
         cursor: pointer;

@@ -2,15 +2,15 @@
 import Button from '../Button/Button.astro'
 import styles from './Section.module.scss'
 
-interface Props {
+interface Props extends astroHTML.JSX.HTMLAttributes {
   preTitle: string
   title: string
 }
 
-const { preTitle, title } = Astro.props
+const { preTitle, title, ...props } = Astro.props
 ---
 
-<section class={styles.section}>
+<section {...props} class={styles.section}>
   <div class={styles.section__top}>
     <div class={styles.title_section}>
       <span class={styles.title_section__pre_title}>{preTitle}</span>

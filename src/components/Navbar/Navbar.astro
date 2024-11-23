@@ -6,17 +6,16 @@ import logo from '@/assets/svg/logo.svg'
 ---
 
 <header class={styles.header}>
-  <img alt="logo" src={logo.src} />
+  <a href="#top">
+    <img alt="logo" src={logo.src} />
+  </a>
   <nav class={styles.nav}>
     <ul class={styles.nav__list}>
       {
         navItems.map((navItem) => (
           <li class={styles.nav__list_item}>
-            <a
-              href={`/#${navItem.split(' ').join('').toLocaleLowerCase()}`}
-              class={styles.nav__list_anchor}
-            >
-              {navItem}
+            <a href={navItem.path} class={styles.nav__list_anchor}>
+              {navItem.name}
             </a>
           </li>
         ))

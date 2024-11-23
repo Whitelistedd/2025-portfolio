@@ -30,11 +30,8 @@ import linkedinSvg from '@/assets/svg/linkedin.svg'
         {
           navItems.map((navItem) => (
             <li class={styles.nav__list_item}>
-              <a
-                href={`/#${navItem.split(' ').join('').toLocaleLowerCase()}`}
-                class={styles.nav__list_anchor}
-              >
-                {navItem}
+              <a href={navItem.path} class={styles.nav__list_anchor}>
+                {navItem.name}
               </a>
             </li>
           ))
