@@ -48,10 +48,108 @@
     }
   }
 
+  .about_me {
+    display: flex;
+    gap: 30px;
+    .details_list {
+      display: flex;
+      flex-direction: column;
+      border-radius: 20px;
+
+      :first-child {
+        border-radius: 20px 20px 0px 0px;
+      }
+
+      :last-child {
+        border-radius: 0px 0px 20px 20px;
+      }
+
+      .details {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border: 1px solid var(--dark-colors-12);
+
+        &__title {
+          font-size: 1.875em;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: 500;
+        }
+
+        &__desc {
+          font-size: 1.125em;
+          font-weight: 400;
+        }
+
+        &__extra_desc {
+          color: var(--grey-70);
+        }
+      }
+    }
+
+    &__img_container {
+      position: relative;
+      height: fit-content;
+      &::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        width: 30%;
+        height: 30%;
+        border: 20px solid var(--dark-colors-03);
+        border-bottom-right-radius: 150px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        right: -20px;
+        width: 30%;
+        height: 30%;
+        border: 20px solid var(--dark-colors-03);
+        border-top-left-radius: 150px;
+      }
+    }
+  }
+
   @media only screen and (max-width: 1440px) {
     .hero {
       padding: 60px 80px;
       font-size: 12px;
     }
+  }
+}
+
+.example {
+  min-width: 500px;
+  min-height: 500px;
+  background: red;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 30%;
+    height: 30%;
+    border: 20px solid var(--dark-colors-03);
+    border-bottom-right-radius: 150px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 30%;
+    height: 30%;
+    border: 20px solid var(--dark-colors-03);
+    border-top-left-radius: 150px;
   }
 }

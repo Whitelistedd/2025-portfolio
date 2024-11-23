@@ -4,12 +4,20 @@ import styles from './styles/index.module.scss'
 import hero_background from '@/assets/svg/abstract-design-1.svg'
 import ArrowLink from '@/components/ArrowLink/ArrowLink.astro'
 import HorizontalScroller from '@/components/HorizontalScroller/HorizontalScroller.astro'
+import { heroWordsList } from '@/constants/heroWordsList'
+import Section from '@/components/Section/Section.astro'
+import aboutMeImg from '@/assets/img/aboutMe.webp'
+import star from '@/assets/svg/abstract-design-3.svg'
 ---
 
 <Layout title="Welcome to Astro.">
   <main class={styles.main}>
     <section class={styles.hero}>
-      <img class={styles.hero__background} src={hero_background.src} />
+      <img
+        alt="hero_image"
+        class={styles.hero__background}
+        src={hero_background.src}
+      />
       <div class={styles.hero__title_section}>
         <span class={styles.hero__title_section__role}>FRONTEND DEVELOPER</span>
         <h1 class={styles.hero__title_section__title}>ISMONOV MUHAMAD</h1>
@@ -21,6 +29,52 @@ import HorizontalScroller from '@/components/HorizontalScroller/HorizontalScroll
         <span class={styles.hero__lets_work__title}>РАБОТАТЬ ВМЕСТЕ</span>
       </div>
     </section>
-    <HorizontalScroller />
+    <HorizontalScroller words={heroWordsList} />
+    <Section>
+      <div class={styles.about_me}>
+        <div class={styles.about_me__img_container}>
+          <img
+            class={styles.about_me__img_container__img}
+            src={aboutMeImg.src}
+          />
+        </div>
+        <div class={styles.details_list}>
+          <div class={styles.details}>
+            <h3 class={styles.details__title}>
+              <img width="40" height="40" alt="star" src={star.src} />
+              Introduction
+            </h3>
+            <p class={styles.details__desc}>
+              I am a passionate frontend developer creating creative web and
+              mobile applications. In my free time, I enjoy snowboarding and
+              playing tennis.
+              <br />
+              <br />
+              I actively participate in the Codecademy community, where I share my
+              experiences and help others with programming. I have successfully debugged
+              code for thousands of users, which has improved my skills.
+              <br />
+              <br />
+              I believe that mutual learning and collaboration are key to success.
+              I strive to create a positive atmosphere in groups so that everyone
+              can find inspiration and support.
+            </p>
+          </div>
+          <div class={styles.details}>
+            <h3 class={styles.details__title}>
+              <img width="40" height="40" alt="star" src={star.src} />
+              Contact Information
+            </h3>
+            <p class={styles.details__desc}>
+              Email
+              <p class={styles.details__extra_desc}>ismonovmukh@gmail.com</p>
+            </p>
+            <div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Section>
   </main>
 </Layout>
