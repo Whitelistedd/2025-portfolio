@@ -1,0 +1,64 @@
+---
+import abstractDesign2 from '@/assets/svg/abstract-design-2.svg'
+import styles from './Footer.module.scss'
+import { navItems } from '@/constants/navItems'
+import ArrowLink from '../ArrowLink/ArrowLink.astro'
+import Button from '../Button/Button.astro'
+import facebookSvg from '@/assets/svg/facebook.svg'
+import twitterSvg from '@/assets/svg/twitter.svg'
+import linkedinSvg from '@/assets/svg/linkedin.svg'
+---
+
+<footer class={styles.footer}>
+  <div class={styles.top}>
+    <img
+      class={styles.top__img}
+      width="200"
+      height="200"
+      src={abstractDesign2.src}
+    />
+    <div class={styles.top__me}>
+      <div class={styles.top__me__lets_work}>
+        <span class={styles.top__me__lets_work__title}
+          >ДАВАЙТЕ <ArrowLink href={'/#contact_me'} /></span
+        >
+        <h1 class={styles.top__me__lets_work__title}>РАБОТАТЬ ВМЕСТЕ</h1>
+      </div>
+    </div>
+    <div class={styles.nav}>
+      <ul class={styles.nav__list}>
+        {
+          navItems.map((navItem) => (
+            <li class={styles.nav__list_item}>
+              <a
+                href={`/#${navItem.split(' ').join('').toLocaleLowerCase()}`}
+                class={styles.nav__list_anchor}
+              >
+                {navItem}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <img
+      class={`${styles.top__img} ${styles['top__img--left']}`}
+      width="200"
+      height="200"
+      src={abstractDesign2.src}
+    />
+  </div>
+  <div class={styles.bottom}>
+    <div class={styles.socials}>
+      <Button class={styles.socials__social}>
+        <img class={styles.socials__social__img} src={facebookSvg.src} />
+      </Button>
+      <Button class={styles.socials__social}>
+        <img class={styles.socials__social__img} src={twitterSvg.src} />
+      </Button>
+      <Button class={styles.socials__social}>
+        <img class={styles.socials__social__img} src={linkedinSvg.src} />
+      </Button>
+    </div>
+  </div>
+</footer>

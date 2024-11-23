@@ -1,0 +1,56 @@
+@import '@/pages/styles/index.module.scss';
+
+.footer {
+  @extend .main;
+  .top {
+    display: flex;
+    flex-direction: row;
+
+    &__img {
+      align-self: center;
+
+      &--left {
+        transform: rotate(180deg);
+      }
+    }
+
+    &__me {
+      @extend .hero;
+      border-bottom: none !important;
+      border-top: none !important;
+      border-left: 1px solid var(--dark-colors-12);
+      border-right: 1px solid var(--dark-colors-12);
+
+      &__lets_work {
+        @extend .hero__lets_work;
+        &__title {
+          @extend .hero__lets_work__title;
+        }
+      }
+    }
+  }
+
+  .nav {
+    padding-left: 80px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid var(--dark-colors-12);
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    padding: 20px 0px;
+    justify-content: center;
+    border-top: 1px solid var(--dark-colors-12);
+  }
+
+  .socials {
+    @extend .socials;
+  }
+}

@@ -222,6 +222,13 @@
     }
   }
 
+  .bottom_logo {
+    display: flex;
+    padding: 0px 20px 40px 0px;
+    opacity: 0.1;
+    margin-left: auto;
+  }
+
   @media only screen and (max-width: 1440px) {
     .hero {
       padding: 60px 80px;

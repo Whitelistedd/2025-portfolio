@@ -9,12 +9,14 @@ import { projects } from '@/constants/projects'
 import { technologies } from '@/constants/technologies'
 import Section from '@/components/Section/Section.astro'
 import aboutMeImg from '@/assets/img/aboutMe.webp'
+import logoSvg from '@/assets/svg/logo.svg'
 import star from '@/assets/svg/abstract-design-3.svg'
 import facebookSvg from '@/assets/svg/facebook.svg'
 import twitterSvg from '@/assets/svg/twitter.svg'
 import linkedinSvg from '@/assets/svg/linkedin.svg'
 import Button from '@/components/Button/Button.astro'
 import Project from '@/components/Project/Project.astro'
+import Footer from '@/components/Footer/Footer.astro'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -162,5 +164,13 @@ import Project from '@/components/Project/Project.astro'
         </div>
       </div>
     </Section>
+    <img
+      class={styles.bottom_logo}
+      width="1062"
+      height="213"
+      src={logoSvg.src}
+    />
+    <HorizontalScroller words={heroWordsList} />
+    <Footer />
   </main>
 </Layout>

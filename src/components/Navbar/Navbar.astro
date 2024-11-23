@@ -1,9 +1,8 @@
 ---
+import { navItems } from '@/constants/navItems'
 import Button from '../Button/Button.astro'
 import styles from './Navbar.module.scss'
 import logo from '@/assets/svg/logo.svg'
-
-const navItems = ['Home','About Me','Projects']
 ---
 
 <header class={styles.header}>
@@ -14,8 +13,8 @@ const navItems = ['Home','About Me','Projects']
         navItems.map((navItem) => (
           <li class={styles.nav__list_item}>
             <a
-              href={navItem}
-              class={styles.nav__list_anchor}}
+              href={`/#${navItem.split(' ').join('').toLocaleLowerCase()}`}
+              class={styles.nav__list_anchor}
             >
               {navItem}
             </a>
