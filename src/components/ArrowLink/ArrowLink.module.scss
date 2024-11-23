@@ -27,4 +27,8 @@
       transform: translateY(-2px) translateX(2px);
     }
   }
+
+  @media only screen and (max-width: 1170px) {
+    padding: 15px 35px;
+  }
 }

@@ -11,9 +11,7 @@ import Section from '@/components/Section/Section.astro'
 import aboutMeImg from '@/assets/img/aboutMe.webp'
 import logoSvg from '@/assets/svg/logo.svg'
 import star from '@/assets/svg/abstract-design-3.svg'
-import facebookSvg from '@/assets/svg/facebook.svg'
-import twitterSvg from '@/assets/svg/twitter.svg'
-import linkedinSvg from '@/assets/svg/linkedin.svg'
+import githubSvg from '@/assets/svg/github.svg'
 import Button from '@/components/Button/Button.astro'
 import Project from '@/components/Project/Project.astro'
 import Footer from '@/components/Footer/Footer.astro'
@@ -33,7 +31,7 @@ import Footer from '@/components/Footer/Footer.astro'
       </div>
       <div class={styles.hero__lets_work}>
         <span class={styles.hero__lets_work__title}
-          >ДАВАЙТЕ <ArrowLink href={'/#contact_me'} /></span
+          >ДАВАЙТЕ <ArrowLink href={'mailto:ismonovmukh@gmail.com'} /></span
         >
         <span class={styles.hero__lets_work__title}>РАБОТАТЬ ВМЕСТЕ</span>
       </div>
@@ -83,24 +81,14 @@ import Footer from '@/components/Footer/Footer.astro'
             </p>
             <div class={styles.details__actions}>
               <div class={styles.socials}>
-                <Button class={styles.socials__social}>
-                  <img
-                    class={styles.socials__social__img}
-                    src={facebookSvg.src}
-                  />
-                </Button>
-                <Button class={styles.socials__social}>
-                  <img
-                    class={styles.socials__social__img}
-                    src={twitterSvg.src}
-                  />
-                </Button>
-                <Button class={styles.socials__social}>
-                  <img
-                    class={styles.socials__social__img}
-                    src={linkedinSvg.src}
-                  />
-                </Button>
+                <a href="https://github.com/Whitelistedd?tab=repositories">
+                  <Button class={styles.socials__social}>
+                    <img
+                      class={styles.socials__social__img}
+                      src={githubSvg.src}
+                    />
+                  </Button>
+                </a>
               </div>
               <div class={styles.details__actions__buttons}>
                 <a

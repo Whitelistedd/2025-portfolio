@@ -15,12 +15,16 @@
     min-width: fit-content;
     gap: 6.5px;
     align-items: center;
-    font-size: 18px;
+    font-size: 1.125em;
   }
 
   &__star {
     width: 40px;
     height: 40px;
+  }
+
+  @media only screen and (max-width: 1170px) {
+    font-size: 12px;
   }
 }
 
@@ -28,7 +32,7 @@
   overflow: hidden;
   .scroller__list {
     flex-wrap: nowrap;
-    animation: scroll 60s linear infinite;
+    animation: scroll 40s linear infinite;
   }
 
   &:hover {

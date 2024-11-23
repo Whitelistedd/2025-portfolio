@@ -11,18 +11,19 @@ const { words } = Astro.props
 
 <script>
   const scrollers = document.querySelectorAll('.scroller')
-  const scrollerList = document.querySelector('.scroller__list')
+  const scrollersList = document.querySelectorAll('.scroller__list')
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches)
     scrollingAnimtion()
 
   function scrollingAnimtion() {
-    if (!scrollerList) return
     scrollers.forEach((scroller) => {
       scroller.setAttribute('data-animated', 'true')
-      const scrollerListItems = Array.from(scrollerList.children)
-      scrollerListItems.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true)
-        scrollerList.appendChild(duplicatedItem)
+      scrollersList.forEach((scrollerList) => {
+        const scrollerListItems = Array.from(scrollerList.children)
+        scrollerListItems.forEach((item) => {
+          const duplicatedItem = item.cloneNode(true)
+          scrollerList.appendChild(duplicatedItem)
+        })
       })
     })
   }

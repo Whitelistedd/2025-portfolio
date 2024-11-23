@@ -3,10 +3,11 @@ import { navItems } from '@/constants/navItems'
 import Button from '../Button/Button.astro'
 import styles from './Navbar.module.scss'
 import logo from '@/assets/svg/logo.svg'
+import menu from '@/assets/svg/menu.svg'
 ---
 
 <header class={styles.header}>
-  <a href="#top">
+  <a class={styles.logo} href="#top">
     <img alt="logo" src={logo.src} />
   </a>
   <nav class={styles.nav}>
@@ -22,5 +23,8 @@ import logo from '@/assets/svg/logo.svg'
       }
     </ul>
   </nav>
-  <Button>Свяжитесь со мной</Button>
+  <Button class={styles.contact_me}>Свяжитесь со мной</Button>
+  <button class={styles.mobile_menu_btn}>
+    <img class={styles.mobile_menu_btn__img} src={menu.src} />
+  </button>
 </header>
