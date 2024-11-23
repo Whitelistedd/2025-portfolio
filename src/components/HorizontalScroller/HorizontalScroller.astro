@@ -31,12 +31,13 @@ const { words } = Astro.props
 <div class={`${styles.scroller} scroller`}>
   <ul class={`${styles.scroller__list} scroller__list`}>
     {
-      words?.map((word) => (
-        <li class={styles.scroller__list_item}>
-          <img alt="star" class={styles.scroller__star} src={star.src} />
-          {word}
-        </li>
-      ))
+      words &&
+        [...words, ...words, ...words]?.map((word) => (
+          <li class={styles.scroller__list_item}>
+            <img alt="star" class={styles.scroller__star} src={star.src} />
+            {word}
+          </li>
+        ))
     }
   </ul>
 </div>

@@ -15,11 +15,8 @@
     }
 
     &__list_item {
-      padding: 30px 40px;
-      background-color: transparent;
-      color: var(--grey-70);
+      overflow: hidden;
       border: 1px solid var(--dark-colors-12);
-
       &:last-child {
         border-top-right-radius: 10px;
       }
@@ -29,7 +26,20 @@
       }
     }
 
-    &__list_item--active {
+    &__list_anchor {
+      display: flex;
+      padding: 30px 40px;
+      background-color: transparent;
+      color: var(--grey-70);
+
+      &:hover {
+        cursor: pointer;
+        background-color: var(--dark-colors-08);
+        color: var(--white);
+      }
+    }
+
+    &__list_anchor--active {
       background-color: var(--dark-colors-08);
       color: var(--white);
     }

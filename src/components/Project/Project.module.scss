@@ -43,4 +43,12 @@
       }
     }
   }
+
+  @media only screen and (max-width: 1440px) {
+    &__img {
+      max-width: 400px;
+      max-height: 205px;
+    }
+    font-size: 13px;
+  }
 }

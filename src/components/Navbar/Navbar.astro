@@ -3,15 +3,7 @@ import Button from '../Button/Button.astro'
 import styles from './Navbar.module.scss'
 import logo from '@/assets/svg/logo.svg'
 
-const currentPath = Astro.url.pathname
-
-const navItems = [
-  { name: 'Home', path: '/' },
-  { name: 'About Me', path: '/#about_me' },
-  { name: 'Projects', path: '/#projects' },
-]
-
-console.log(currentPath)
+const navItems = ['Home','About Me','Projects']
 ---
 
 <header class={styles.header}>
@@ -20,11 +12,12 @@ console.log(currentPath)
     <ul class={styles.nav__list}>
       {
         navItems.map((navItem) => (
-          <li
-            class={`${styles.nav__list_item} ${currentPath === navItem.path && styles['nav__list_item--active']}`}
-          >
-            <a href={navItem.path} class={styles.nav__list_anchor}>
-              {navItem.name}
+          <li class={styles.nav__list_item}>
+            <a
+              href={navItem}
+              class={styles.nav__list_anchor}}
+            >
+              {navItem}
             </a>
           </li>
         ))
