@@ -8,6 +8,10 @@ import { heroWordsList } from '@/constants/heroWordsList'
 import Section from '@/components/Section/Section.astro'
 import aboutMeImg from '@/assets/img/aboutMe.webp'
 import star from '@/assets/svg/abstract-design-3.svg'
+import facebookSvg from '@/assets/svg/facebook.svg'
+import twitterSvg from '@/assets/svg/twitter.svg'
+import linkedinSvg from '@/assets/svg/linkedin.svg'
+import Button from '@/components/Button/Button.astro'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -67,10 +71,40 @@ import star from '@/assets/svg/abstract-design-3.svg'
             </h3>
             <p class={styles.details__desc}>
               Email
-              <p class={styles.details__extra_desc}>ismonovmukh@gmail.com</p>
+              <br />
+              <span class={styles.details__extra_desc}>
+                ismonovmukh@gmail.com
+              </span>
             </p>
-            <div>
-              <div></div>
+            <div class={styles.details__actions}>
+              <div class={styles.socials}>
+                <Button class={styles.socials__social}>
+                  <img
+                    class={styles.socials__social__img}
+                    src={facebookSvg.src}
+                  />
+                </Button>
+                <Button class={styles.socials__social}>
+                  <img
+                    class={styles.socials__social__img}
+                    src={twitterSvg.src}
+                  />
+                </Button>
+                <Button class={styles.socials__social}>
+                  <img
+                    class={styles.socials__social__img}
+                    src={linkedinSvg.src}
+                  />
+                </Button>
+              </div>
+              <div class={styles.details__actions__buttons}>
+                <Button class={styles.details__actions__buttons__button}
+                  >Let's Work</Button
+                >
+                <Button class={styles.details__actions__buttons__button}
+                  >Download CV</Button
+                >
+              </div>
             </div>
           </div>
         </div>
