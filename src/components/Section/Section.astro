@@ -1,0 +1,17 @@
+---
+import styles from './Section.module.scss'
+
+interface Props {}
+
+const { ...props } = Astro.props
+---
+
+<section class={styles.section}>
+  <div class={styles.title_section}>
+    <span class={styles.title_section__pre_title}>ABOUT</span>
+    <h2 class={styles.title_section__title}>I AM MUHAMAD</h2>
+  </div>
+  <div class={styles.content}>
+    <slot />
+  </div>
+</section>

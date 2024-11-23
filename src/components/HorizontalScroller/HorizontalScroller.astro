@@ -16,12 +16,12 @@ const { words } = Astro.props
     scrollingAnimtion()
 
   function scrollingAnimtion() {
+    if (!scrollerList) return
     scrollers.forEach((scroller) => {
-      scroller.setAttribute('data-animated', true)
+      scroller.setAttribute('data-animated', 'true')
       const scrollerListItems = Array.from(scrollerList.children)
       scrollerListItems.forEach((item) => {
         const duplicatedItem = item.cloneNode(true)
-        duplicatedItem.setAttribute('aria-hidden', true)
         scrollerList.appendChild(duplicatedItem)
       })
     })
@@ -30,21 +30,13 @@ const { words } = Astro.props
 
 <div class={`${styles.scroller} scroller`}>
   <ul class={`${styles.scroller__list} scroller__list`}>
-    <li class={styles.scroller__list_item}>
-      <img class={styles.scroller__star} src={star.src} />
-      ОПЫТ РАБОТЫ В БЭК-ЭНДE
-    </li>
-    <li class={styles.scroller__list_item}>
-      <img class={styles.scroller__star} src={star.src} />
-      FRONT-END РАЗРАБОТЧИК
-    </li>
-    <li class={styles.scroller__list_item}>
-      <img class={styles.scroller__star} src={star.src} />
-      3 ГОДА ОПЫТА
-    </li>
-    <li class={styles.scroller__list_item}>
-      <img class={styles.scroller__star} src={star.src} />
-      REACT NATIVE РАЗРАБОТЧИК
-    </li>
+    {
+      words?.map((word) => (
+        <li class={styles.scroller__list_item}>
+          <img alt="star" class={styles.scroller__star} src={star.src} />
+          {word}
+        </li>
+      ))
+    }
   </ul>
 </div>

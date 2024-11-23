@@ -15,7 +15,7 @@ console.log(currentPath)
 ---
 
 <header class={styles.header}>
-  <img src={logo.src} />
+  <img alt="logo" src={logo.src} />
   <nav class={styles.nav}>
     <ul class={styles.nav__list}>
       {
@@ -23,7 +23,9 @@ console.log(currentPath)
           <li
             class={`${styles.nav__list_item} ${currentPath === navItem.path && styles['nav__list_item--active']}`}
           >
-            <a class={styles.nav__list_anchor}>{navItem.name}</a>
+            <a href={navItem.path} class={styles.nav__list_anchor}>
+              {navItem.name}
+            </a>
           </li>
         ))
       }

@@ -1,0 +1,20 @@
+.section {
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  .title_section {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    border-bottom: 1px solid var(--dark-colors-12);
+    &__pre_title {
+      font-size: 1.25em;
+    }
+
+    &__title {
+      font-size: 3.625em;
+    }
+  }
+}
