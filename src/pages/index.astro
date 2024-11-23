@@ -5,6 +5,8 @@ import hero_background from '@/assets/svg/abstract-design-1.svg'
 import ArrowLink from '@/components/ArrowLink/ArrowLink.astro'
 import HorizontalScroller from '@/components/HorizontalScroller/HorizontalScroller.astro'
 import { heroWordsList } from '@/constants/heroWordsList'
+import { projects } from '@/constants/projects'
+import { technologies } from '@/constants/technologies'
 import Section from '@/components/Section/Section.astro'
 import aboutMeImg from '@/assets/img/aboutMe.webp'
 import star from '@/assets/svg/abstract-design-3.svg'
@@ -12,6 +14,7 @@ import facebookSvg from '@/assets/svg/facebook.svg'
 import twitterSvg from '@/assets/svg/twitter.svg'
 import linkedinSvg from '@/assets/svg/linkedin.svg'
 import Button from '@/components/Button/Button.astro'
+import Project from '@/components/Project/Project.astro'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -34,7 +37,7 @@ import Button from '@/components/Button/Button.astro'
       </div>
     </section>
     <HorizontalScroller words={heroWordsList} />
-    <Section>
+    <Section preTitle="ABOUT ME" title="I AM MUHAMAD">
       <div class={styles.about_me}>
         <div class={styles.about_me__img_container}>
           <img
@@ -98,13 +101,62 @@ import Button from '@/components/Button/Button.astro'
                 </Button>
               </div>
               <div class={styles.details__actions__buttons}>
-                <Button class={styles.details__actions__buttons__button}
-                  >Let's Work</Button
+                <a
+                  class={styles.details__actions__buttons__anchor}
+                  href="/#contact_me"
                 >
-                <Button class={styles.details__actions__buttons__button}
-                  >Download CV</Button
-                >
+                  <Button class={styles.details__actions__buttons__button}>
+                    Let's Work
+                  </Button>
+                </a>
+                <a class={styles.details__actions__buttons__anchor}>
+                  <Button class={styles.details__actions__buttons__button}>
+                    Download CV
+                  </Button>
+                </a>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Section>
+    <Section preTitle="PORTFOLIO" title="EXPLORE MY PROJECTS">
+      <Button slot="sideButton">View All Works -></Button>
+      <div class={styles.projects}>
+        {
+          projects.map(({ imageSrc, title, viewCodeLink, viewProjectLink }) => (
+            <Project
+              imageSrc={imageSrc}
+              title={title}
+              viewProjectLink={viewProjectLink}
+              viewCodeLink={viewCodeLink}
+            />
+          ))
+        }
+      </div>
+    </Section>
+    <Section preTitle="EXPERIENCE" title="MY SKILLS AND EXPERIENCE">
+      <div class={styles.experience_section}>
+        <div class={styles.technologies}>
+          {
+            technologies.map((tech) => (
+              <div class={styles.technology}>
+                <img class={styles.technology__img} src={tech.src} />
+                <span class={styles.technology__name}>{tech.name}</span>
+              </div>
+            ))
+          }
+        </div>
+        <div class={styles.experiences}>
+          <div class={styles.experience}>
+            <span class={styles.experience__timeline}>2021 - Now</span>
+            <div class={styles.experience__details}>
+              <strong class={styles.experience__details__company}
+                >Sektor Business</strong
+              >
+              <strong class={styles.experience__details__role}
+                >Fullstack Developer</strong
+              >
             </div>
           </div>
         </div>

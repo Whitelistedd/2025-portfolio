@@ -51,6 +51,7 @@
   .about_me {
     display: flex;
     gap: 30px;
+    justify-content: center;
     align-items: center;
     .details_list {
       display: flex;
@@ -58,6 +59,7 @@
       border-radius: 20px;
 
       .details {
+        max-width: 700px;
         padding: 40px;
         display: flex;
         flex-direction: column;
@@ -91,6 +93,7 @@
 
         &__actions {
           display: flex;
+          align-items: center;
           justify-content: space-between;
           &__buttons {
             display: flex;
@@ -152,6 +155,69 @@
       justify-content: center;
       &::before {
         border-radius: 100px;
+      }
+    }
+  }
+
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  .experience_section {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    font-size: 16px;
+
+    .technologies {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 26px;
+      .technology {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+
+        &__img {
+          object-fit: contain;
+          width: 60px;
+          height: 60px;
+          padding: 20px;
+          background-color: var(--dark-colors-30);
+          border-radius: 100px;
+        }
+      }
+    }
+
+    .experiences {
+      flex: 1;
+      .experience {
+        display: flex;
+        gap: 60px;
+        align-items: baseline;
+        justify-content: center;
+        font-weight: 600;
+
+        &__timeline {
+          font-size: 1.5em;
+        }
+
+        &__details {
+          display: flex;
+          flex-direction: column;
+          &__company {
+            font-size: 1.5em;
+          }
+          &__role {
+            font-size: 1em;
+            color: var(--grey-70);
+          }
+        }
       }
     }
   }
