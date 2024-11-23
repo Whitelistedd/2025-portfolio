@@ -1,15 +1,22 @@
 ---
+import Button from '../Button/Button.astro'
 import styles from './Section.module.scss'
 
-interface Props {}
+interface Props {
+  preTitle: string
+  title: string
+}
 
-const { ...props } = Astro.props
+const { preTitle, title } = Astro.props
 ---
 
 <section class={styles.section}>
-  <div class={styles.title_section}>
-    <span class={styles.title_section__pre_title}>ABOUT</span>
-    <h2 class={styles.title_section__title}>I AM MUHAMAD</h2>
+  <div class={styles.section__top}>
+    <div class={styles.title_section}>
+      <span class={styles.title_section__pre_title}>{preTitle}</span>
+      <h2 class={styles.title_section__title}>{title}</h2>
+    </div>
+    <slot name="sideButton" />
   </div>
   <div class={styles.content}>
     <slot />

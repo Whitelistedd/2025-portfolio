@@ -31,6 +31,12 @@
     flex-wrap: nowrap;
     animation: scroll 60s linear infinite;
   }
+
+  &:hover {
+    .scroller__list {
+      animation-play-state: paused;
+    }
+  }
 }
 
 @keyframes scroll {

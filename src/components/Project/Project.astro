@@ -1,0 +1,26 @@
+---
+import styles from './Project.module.scss'
+import arrow from '@/assets/svg/arrow.svg'
+
+interface Props {
+  imageSrc: string
+  title: string
+  viewProjectLink: string
+  viewCodeLink: string
+}
+
+const { imageSrc, title, viewCodeLink, viewProjectLink } = Astro.props
+---
+
+<div class={styles.project}>
+  <img class={styles.project__img} width="500" height="255" src={imageSrc} />
+  <div class={styles.project__details}>
+    <span class={styles.project__title}>{title}</span>
+    <a class={styles.project__view_project} href={viewProjectLink}>
+      VIEW PROJECT <img width="24" height="24" src={arrow.src} />
+    </a>
+    <a class={styles.project__view_code} href={viewCodeLink}>
+      VIEW CODE <img width="24" height="24" src={arrow.src} />
+    </a>
+  </div>
+</div>
