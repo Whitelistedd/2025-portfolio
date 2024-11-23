@@ -20,7 +20,8 @@
     transition: 200ms ease;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     cursor: pointer;
     * {
       transform: translateY(-2px) translateX(2px);

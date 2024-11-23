@@ -24,7 +24,8 @@
     z-index: -1;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     cursor: pointer;
     &::before {
       -webkit-box-shadow:

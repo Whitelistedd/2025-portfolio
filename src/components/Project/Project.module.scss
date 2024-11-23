@@ -8,6 +8,7 @@
   &__details {
     display: flex;
     align-items: center;
+    gap: 20px;
   }
 
   &__title {
@@ -31,5 +32,15 @@
     display: flex;
     align-items: center;
     font-size: 1.125em;
+    * {
+      transition: 200ms ease;
+    }
+
+    &:hover,
+    &:focus {
+      * {
+        transform: translateY(-2px) translateX(2px);
+      }
+    }
   }
 }
