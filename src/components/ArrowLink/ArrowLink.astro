@@ -7,6 +7,6 @@ interface Props extends astroHTML.JSX.AnchorHTMLAttributes {}
 const { ...props } = Astro.props
 ---
 
-<a class={styles.anchor} {...props}>
+<a class={`${props.class} ${styles.anchor}`} {...props}>
   <img alt="arrow" class={styles.anchor__arrow} src={arrow.src} />
 </a>

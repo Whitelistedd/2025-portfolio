@@ -319,5 +319,107 @@
   }
 
   @media only screen and (max-width: 1170px) {
+    .about_me {
+      &__img_container,
+      &__img_container__img {
+        max-height: 385px;
+        max-width: 430px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 955px) {
+    .about_me {
+      flex-direction: column;
+      &__img_container,
+      &__img_container__img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    .hero {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+
+      &__background {
+      }
+    }
+
+    .experience_section {
+      flex-direction: column-reverse;
+      .experiences {
+        flex: 1;
+        .experience {
+          justify-content: flex-start;
+        }
+      }
+      .technologies {
+        justify-content: center;
+      }
+    }
+    .bottom_logo {
+      max-width: 400px;
+      padding-bottom: 0px;
+    }
+  }
+
+  @media only screen and (max-width: 580px) {
+    .hero {
+      font-size: 8px;
+      padding: 60px 16px;
+
+      &__lets_work {
+        &__arrow {
+          padding: 10px 25px;
+        }
+      }
+    }
+
+    .about_me {
+      .details_list {
+        .details {
+          &__actions {
+            gap: 20px;
+            flex-wrap: wrap;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 475px) {
+    .about_me {
+      .details_list {
+        .details {
+          &__actions {
+            flex-direction: column;
+            align-items: flex-start;
+            &__buttons {
+              width: 100%;
+              flex: 1;
+              flex-direction: column;
+              &__button {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .experience_section {
+      .experiences {
+        .experience {
+          gap: 20px;
+        }
+      }
+    }
+    .bottom_logo {
+      max-width: 250px;
+      padding-bottom: 0px;
+    }
   }
 }

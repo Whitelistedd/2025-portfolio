@@ -51,4 +51,20 @@
     }
     font-size: 13px;
   }
+  @media only screen and (max-width: 475px) {
+    width: 100%;
+    font-size: 12px;
+    &__img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__view_code,
+    &__view_project {
+      * {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
 }
