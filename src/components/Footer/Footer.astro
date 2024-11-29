@@ -5,6 +5,7 @@ import { navItems } from '@/constants/navItems'
 import ArrowLink from '../ArrowLink/ArrowLink.astro'
 import Button from '../Button/Button.astro'
 import githubSvg from '@/assets/svg/github.svg'
+import { mailTo } from '@/pages/index.astro'
 ---
 
 <footer class={styles.footer}>
@@ -19,7 +20,7 @@ import githubSvg from '@/assets/svg/github.svg'
       <div class={styles.top__me}>
         <div class={styles.top__me__lets_work}>
           <span class={styles.top__me__lets_work__title}
-            >ДАВАЙТЕ <ArrowLink href={'mailto:ismonovmukh@gmail.com'} /></span
+            >ДАВАЙТЕ <ArrowLink href={mailTo} /></span
           >
           <h1 class={styles.top__me__lets_work__title}>РАБОТАТЬ ВМЕСТЕ</h1>
         </div>

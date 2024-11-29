@@ -4,6 +4,7 @@ import Button from '../Button/Button.astro'
 import styles from './Navbar.module.scss'
 import logo from '@/assets/svg/logo.svg'
 import menu from '@/assets/svg/menu.svg'
+import { mailTo } from '@/pages/index.astro'
 ---
 
 <header class={styles.header}>
@@ -23,7 +24,9 @@ import menu from '@/assets/svg/menu.svg'
       }
     </ul>
   </nav>
-  <Button class={styles.contact_me}>Свяжитесь со мной</Button>
+  <a href={mailTo}>
+    <Button class={styles.contact_me}>Свяжитесь со мной</Button>
+  </a>
   <button class={styles.mobile_menu_btn}>
     <img class={styles.mobile_menu_btn__img} src={menu.src} />
   </button>

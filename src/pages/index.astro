@@ -15,6 +15,8 @@ import githubSvg from '@/assets/svg/github.svg'
 import Button from '@/components/Button/Button.astro'
 import Project from '@/components/Project/Project.astro'
 import Footer from '@/components/Footer/Footer.astro'
+
+export const mailTo = 'mailto:ismonovmukh@gmail.com'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -33,7 +35,7 @@ import Footer from '@/components/Footer/Footer.astro'
         <span class={styles.hero__lets_work__title}
           >ДАВАЙТЕ <ArrowLink
             class={styles.hero__lets_work__arrow}
-            href={'mailto:ismonovmukh@gmail.com'}
+            href={mailTo}
           /></span
         >
         <span class={styles.hero__lets_work__title}>РАБОТАТЬ ВМЕСТЕ</span>
@@ -96,7 +98,7 @@ import Footer from '@/components/Footer/Footer.astro'
               <div class={styles.details__actions__buttons}>
                 <a
                   class={styles.details__actions__buttons__anchor}
-                  href="/#contact_me"
+                  href={mailTo}
                 >
                   <Button class={styles.details__actions__buttons__button}>
                     Давайте работать
