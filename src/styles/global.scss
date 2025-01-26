@@ -1,5 +1,8 @@
 @import './colors.scss';
 @import './fonts.scss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 ul,
 li,
@@ -50,4 +53,10 @@ code {
     Bitstream Vera Sans Mono,
     Courier New,
     monospace;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
 }

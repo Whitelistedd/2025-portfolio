@@ -1,14 +1,14 @@
-import Reactjs from '@/assets/img/reactjs.webp'
-import Typescript from '@/assets/img/typescript.webp'
 import Css from '@/assets/img/css.webp'
 import Git from '@/assets/img/git.webp'
-import Redux from '@/assets/img/redux.webp'
-import Sass from '@/assets/img/sass.webp'
-import Nextjs from '@/assets/img/nextjs.webp'
 import Javascript from '@/assets/img/javascript.webp'
-import Nodejs from '@/assets/img/nodejs.webp'
 import Mongodb from '@/assets/img/mongodb.webp'
+import Nextjs from '@/assets/svg/nextjs.svg'
+import Nodejs from '@/assets/img/nodejs.webp'
+import Reactjs from '@/assets/img/reactjs.webp'
+import Redux from '@/assets/img/redux.webp'
 import Sanity from '@/assets/img/sanity.webp'
+import Sass from '@/assets/img/sass.webp'
+import Typescript from '@/assets/img/typescript.webp'
 
 export const technologies = [
   {

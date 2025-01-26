@@ -6,16 +6,10 @@ export const projects = [
     viewCodeLink: 'https://github.com/social-tree/E-Messenger',
   },
   {
-    imageSrc: `${import.meta.env.SUPABASE_STORAGE_URL}/fruit-clicker.jpg`,
-    title: 'Fruit Clicker (Telegram app)',
-    viewProjectLink: 'https://github.com/social-tree/Potea',
-    viewCodeLink: 'https://github.com/social-tree/Potea',
-  },
-  {
     imageSrc: `${import.meta.env.SUPABASE_STORAGE_URL}/Fcets0Y.png`,
     title: 'Potea',
-    viewProjectLink: 'https://t.me/fruit_puncher_bot/fruit_puncher',
-    viewCodeLink: 'https://github.com/Whitelistedd/fruit-clicker-game',
+    viewProjectLink: 'https://github.com/social-tree/Potea',
+    viewCodeLink: 'https://github.com/social-tree/Potea',
   },
   {
     imageSrc: `${import.meta.env.SUPABASE_STORAGE_URL}/xRg7Z68.jpeg`,

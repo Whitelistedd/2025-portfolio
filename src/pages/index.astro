@@ -15,7 +15,10 @@ import githubSvg from '@/assets/svg/github.svg'
 import Button from '@/components/Button/Button.astro'
 import Project from '@/components/Project/Project.astro'
 import Footer from '@/components/Footer/Footer.astro'
-
+import { OrbitingSkills } from '@/components/OrbitingSkills/OrbitingSkills'
+import { AnimatedList } from '@/components/AnimatedList/AnimatedList'
+import { HeroTitle } from '@/components/HeroTitle/HeroTitle'
+import { imageConfig } from 'astro:assets'
 export const mailTo = 'mailto:ismonovmukh@gmail.com'
 ---
 
@@ -28,8 +31,7 @@ export const mailTo = 'mailto:ismonovmukh@gmail.com'
         src={hero_background.src}
       />
       <div class={styles.hero__title_section}>
-        <span class={styles.hero__title_section__role}>FRONTEND DEVELOPER</span>
-        <h1 class={styles.hero__title_section__title}>ISMONOV MUHAMAD</h1>
+        <HeroTitle client:load />
       </div>
       <div class={styles.hero__lets_work}>
         <span class={styles.hero__lets_work__title}
@@ -122,8 +124,8 @@ export const mailTo = 'mailto:ismonovmukh@gmail.com'
             <Project
               imageSrc={imageSrc}
               title={title}
-              viewProjectLink={viewProjectLink}
               viewCodeLink={viewCodeLink}
+              viewProjectLink={viewProjectLink}
             />
           ))
         }
@@ -131,37 +133,25 @@ export const mailTo = 'mailto:ismonovmukh@gmail.com'
     </Section>
     <Section preTitle="ОПЫТ" title="МОИ НАВЫКИ И ОПЫТ">
       <div class={styles.experience_section}>
-        <div class={styles.technologies}>
-          {
-            technologies.map((tech) => (
-              <div class={styles.technology}>
-                <img class={styles.technology__img} src={tech.src} />
-                <span class={styles.technology__name}>{tech.name}</span>
-              </div>
-            ))
-          }
-        </div>
+        <OrbitingSkills client:load />
         <div class={styles.experiences}>
-          <div class={styles.experience}>
-            <span class={styles.experience__timeline}>2022 - Сейчас</span>
-            <div class={styles.experience__details}>
-              <strong class={styles.experience__details__company}
-                >Sektor Business</strong
-              >
-              <strong class={styles.experience__details__role}
-                >Fullstack Developer</strong
-              >
+          <AnimatedList delay={300} client:visible>
+            <div></div>
+            <div class={styles.experience}>
+              <span class={styles.experience__timeline}>2022 - Сейчас</span>
+              <div class={styles.experience__details}>
+                <strong class={styles.experience__details__company}
+                  >Sektor Business</strong
+                >
+                <strong class={styles.experience__details__role}
+                  >Fullstack Developer</strong
+                >
+              </div>
             </div>
-          </div>
+          </AnimatedList>
         </div>
       </div>
     </Section>
-    <img
-      class={styles.bottom_logo}
-      width="1062"
-      height="213"
-      src={logoSvg.src}
-    />
     <HorizontalScroller words={heroWordsList} />
     <Footer />
   </main>
