@@ -70,35 +70,33 @@
 
   @media only screen and (max-width: 980px) {
     height: 108px;
-    padding: 0px;
-    align-items: flex-end;
+    padding: 0px 8px;
+    align-items: center;
 
-    .contact_me,
     .nav__list {
       display: none;
     }
 
-    .logo {
-      padding-left: 16px;
-      padding-bottom: 27px;
+    .contact_me {
+      font-size: 0.8em;
     }
 
     .mobile_menu_btn {
-      display: flex;
-      &__img {
+      display: none;
+      /* &__img {
         display: flex;
         padding: 27px 23.5px;
         border-top: 1px solid var(--dark-colors-12);
         border-left: 1px solid var(--dark-colors-12);
         border-top-left-radius: 20px;
 
-        width: 30px;
-        height: 30px;
+        min-width: 30px;
+        min-height: 30px;
 
         &:hover {
           cursor: pointer;
         }
-      }
+      } */
     }
   }
 

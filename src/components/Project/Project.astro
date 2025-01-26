@@ -1,4 +1,5 @@
 ---
+import { ShineBorder } from '../ShineBorder/ShineBorder'
 import styles from './Project.module.scss'
 import arrow from '@/assets/svg/arrow.svg'
 
@@ -13,7 +14,14 @@ const { imageSrc, title, viewCodeLink, viewProjectLink } = Astro.props
 ---
 
 <div class={styles.project}>
-  <img class={styles.project__img} width="500" height="255" src={imageSrc} />
+  <ShineBorder
+    borderRadius={20}
+    borderWidth={4}
+    className="relative flex min-w-0 p-0 m-0 flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl"
+    color={['#4a2ced']}
+  >
+    <img class={styles.project__img} width="500" height="255" src={imageSrc} />
+  </ShineBorder>
   <div class={styles.project__details}>
     <span class={styles.project__title}>{title}</span>
     <a class={styles.project__view_project} href={viewProjectLink}>

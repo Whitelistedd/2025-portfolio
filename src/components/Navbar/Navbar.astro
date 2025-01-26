@@ -5,6 +5,7 @@ import styles from './Navbar.module.scss'
 import logo from '@/assets/svg/logo.svg'
 import menu from '@/assets/svg/menu.svg'
 import { mailTo } from '@/pages/index.astro'
+import { ShimmerButton } from '../ShimmerButton/ShimmerButton'
 ---
 
 <header class={styles.header}>
@@ -25,7 +26,9 @@ import { mailTo } from '@/pages/index.astro'
     </ul>
   </nav>
   <a href={mailTo}>
-    <Button class={styles.contact_me}>Свяжитесь со мной</Button>
+    <ShimmerButton className={`shadow-2xl ${styles.contact_me}`}>
+      <span> Свяжитесь со мной </span>
+    </ShimmerButton>
   </a>
   <button class={styles.mobile_menu_btn}>
     <img class={styles.mobile_menu_btn__img} src={menu.src} />
